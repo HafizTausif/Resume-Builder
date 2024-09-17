@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <style>
+        /* Style for hiding form after submission */
+        .hidden {
+            display: none;
+        }
+        .resume-preview {
+            margin-top: 20px;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="form-container">
+    <form id="resumeForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Your Name" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Your Email" required>
+        <label for="phone">Phone:</label>
+        <input type="text" id="phone" placeholder="Your Phone Number" required>
+        
+        <!-- Experience and Education sections will be dynamically added -->
+        <div id="experienceContainer"></div>
+        <button type="button" id="addExperience">Add Experience</button>
+        
+        <div id="educationContainer"></div>
+        <button type="button" id="addEducation">Add Education</button>
+
+        <!-- Image upload -->
+        <label for="image">Upload Profile Image:</label>
+        <input type="file" id="image" accept="image/*">
+
+        <button type="submit">Generate Resume</button>
+    </form>
+</div>
+
+<!-- Resume preview section -->
+<div class="resume-preview hidden" id="resumeContent"></div>
+
+<!-- Download PDF button -->
+<button id="downloadResume" class="hidden">Download as PDF</button>
+
+<script src="index.js"></script>
+</body>
+</html>
